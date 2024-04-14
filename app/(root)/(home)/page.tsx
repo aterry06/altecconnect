@@ -9,9 +9,7 @@ const Home = () => {
 
   const time = moment().format('h:mm A');
   const date = moment().format('MMMM Do, YYYY');
-  const upcomingMeetingTime = moment('2024-04-15T11:00:00').format('h:mm A');
-  const upcomingMeetingDate = moment('2024-04-15T11:00:00').format('MMMM Do, YYYY');
-
+ 
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
