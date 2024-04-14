@@ -1,10 +1,14 @@
+
 import MeetingTypeList from '@/components/MeetingTypeList';
+import moment from 'moment';
+import 'moment-timezone';
 
 const Home = () => {
-  const now = new Date();
+  // Set the default timezone to America/Belize
+  moment.tz.setDefault('America/Belize');
 
-  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+  const time = moment().format('h:mm A');
+  const date = moment().format('MMMM Do, YYYY');
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
