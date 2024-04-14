@@ -9,13 +9,16 @@ const Home = () => {
 
   const time = moment().format('h:mm A');
   const date = moment().format('MMMM Do, YYYY');
+  const upcomingMeetingTime = moment('2024-04-15T11:00:00').format('h:mm A');
+  const upcomingMeetingDate = moment('2024-04-15T11:00:00').format('MMMM Do, YYYY');
+
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
       <div className="h-[303px] w-full rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
-          <h2 className="glassmorphism max-w-[273px] rounded py-2 text-center text-base font-normal">
-            Upcoming Meeting at: {time}
+          <h2 className="glassmorphism max-w-[600px] rounded py-2 text-center text-base font-normal">
+            Upcoming Meeting : View scheduled meetings on the Upcoming Page
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
